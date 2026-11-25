@@ -1,0 +1,20 @@
+services:
+  target-k8:
+    image: nginx:alpine
+    container_name: target-k8
+    volumes:
+      - vol-k8:/usr/share/nginx/html/data
+    networks: [lab-k8]
+  attacker-k8:
+    image: uts-kali-tools
+    container_name: attacker-k8
+    command: sleep infinity
+    cap_add: [NET_ADMIN, NET_RAW]
+    networks: [lab-k8]
+
+volumes:
+  vol-k8:
+
+networks:
+  lab-k8:
+    internal: true

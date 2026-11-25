@@ -1,0 +1,10 @@
+*.enc
+*.pem
+*.key
+*.cap
+*.pcap
+*.log
+dns-*.log
+hasil-*.txt
+laporan-*.txt
+wordlist-*.txt
