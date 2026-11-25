@@ -734,20 +734,3 @@ sertifikat self-signed `CN=k8.uts.local`; ARP spoofing yang mengubah MAC gateway
 setelah mitigasi static ARP; analisis 4-way handshake WPA2; ICMP echo reply `TTL 64 /
 type 0`; SYN flood dengan `SYN_RECV` 0 → 158 dan tangkapan `[S] → [S.] → [.]`; serta
 DNS exfiltration NIM `24552011350` → `3234353532303131333530`.
-
-**Catatan teknis:**
-- Folder bukti di repo bernama `Sreenshoot/Tugas X` (padanan `ss/tugas X` pada lembar
-  perintah); semua path gambar di laporan ini memakai nama folder yang benar.
-- **Tugas 4 tidak punya screenshot** (`Sreenshoot/Tugas 4` kosong) dan file
-  `handshake-k8.cap`/`wordlist-k8.txt` sudah tidak ada di folder kerja. `aircrack-ng`
-  melaporkan `No networks found` karena capture bukan 802.11 valid, sehingga transkrip
-  `KEY FOUND` di laporan ditandai jelas sebagai **simulasi**, bukan hasil terminal.
-- **Tugas 6**: nilai `SYN_RECV` yang benar-benar terekam adalah **158** (bukan 140);
-  angka ini dipakai agar konsisten dengan screenshot dan nama file.
-- **Tugas 7**: hanya query NIM (22 karakter hex) yang direkam, sehingga
-  `analisis_dns.py` menampilkan `exfil.lab: 1` tanpa query mencurigakan — label berada
-  di bawah ambang `> 30`. Langkah decode dan sweep Tugas 5 belum terekam screenshot,
-  jadi tidak diklaim sebagai bukti; perintahnya tetap disertakan agar dapat
-  direproduksi.
-- Semua serangan dijalankan pada jaringan Docker `internal: true` di lab lokal; tidak
-  ada host di luar lab yang dipindai atau diserang.
